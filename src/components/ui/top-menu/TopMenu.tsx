@@ -1,30 +1,36 @@
-import Link from "next/link"
+'use client';
+
+import Link from 'next/link';
 import { IoSearchOutline, IoCartOutline } from 'react-icons/io5';
 
-import { titleFont } from "@/config/fonts"
+import { titleFont } from '@/config/fonts';
+import { useUIStore } from '@/store';
 
 export const TopMenu = () => {
+
+  const openSideMenu = useUIStore(state => state.openSideMenu);
+
   return (
     <nav className="flex px-5 justify-between items-center w-full">
 
-      {/* logo */}
+      {/* Logo */}
       <div>
         <Link
           href="/">
-          <span className={`${titleFont.className} antialiased font-bold`}>Crochet Reyes</span>
-          <span className={`${titleFont.className} antialiased font-bold`}> | Tienda</span>
+          <span className={`${titleFont.className} antialiased font-bold`} >Teslo</span>
+          <span> | Shop</span>
         </Link>
       </div>
 
       {/* Center Menu */}
-
       <div className="hidden sm:block">
 
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/small">Pequeños</Link>
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/medium">Medianos</Link>
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/big">Grandes</Link>
+        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/men">Hombres</Link>
+        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/women">Mujeres</Link>
+        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/category/kids">Niños</Link>
 
       </div>
+
 
       {/* Search, Cart, Menu */}
       <div className="flex items-center">
@@ -43,12 +49,13 @@ export const TopMenu = () => {
         </Link>
 
         <button
-          // onClick={openSideMenu}
+          onClick={openSideMenu}
           className="m-2 p-2 rounded-md transition-all hover:bg-gray-100">
           Menú
         </button>
 
       </div>
+
     </nav>
-  )
-}
+  );
+};
