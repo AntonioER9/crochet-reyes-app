@@ -7,22 +7,23 @@ interface SeedProduct {
     slug: string;
     tags: string[];
     title: string;
-    // type: ValidTypes;
+    type: ValidTypes;
     size: ValidSizes;
 }
 
 // type ValidSizes = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
 type ValidSizes = 'small' | 'medium' | 'big' | 'all';
-// type ValidTypes = 'shirts'|'pants'|'hoodies'|'hats';
+type ValidTypes = 'amigurumis'|'tablecloths';
 
 interface SeedData {
+    categories: string[];
     products: SeedProduct[],
 }
 
-
-
-
 export const initialData: SeedData = {
+    categories: [
+        'Amigurumis', 'Tablecloths'
+    ],
     products: [
         {
             description: "Batman small.",
@@ -34,7 +35,7 @@ export const initialData: SeedData = {
             price: 75,
             // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "mens_chill_crew_neck_sweatshirt",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['sweatshirt'],
             title: "Batman",
             size: 'small'
@@ -49,7 +50,7 @@ export const initialData: SeedData = {
             price: 200,
             // sizes: ['XS','S','M','XL','XXL'],
             slug: "men_quilted_shirt_jacket",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['jacket'],
             title: "Hulk small",
             size: 'small'
@@ -65,7 +66,7 @@ export const initialData: SeedData = {
             price: 130,
             // sizes: ['S','M','L','XL','XXL'],
             slug: "men_raven_lightweight_zip_up_bomber_jacket",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Perrito",
             size: 'small'
@@ -81,7 +82,7 @@ export const initialData: SeedData = {
             price: 45,
             // sizes: ['XS','S','M','L'],
             slug: "men_turbine_long_sleeve_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Perro pequeño",
             size: 'small'
@@ -96,7 +97,7 @@ export const initialData: SeedData = {
             price: 40,
             // sizes: ['M','L','XL','XXL'],
             slug: "men_turbine_short_sleeve_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Superman pequeño",
             size: 'small'
@@ -111,7 +112,7 @@ export const initialData: SeedData = {
             price: 35,
             // sizes: ['M','L','XL','XXL'],
             slug: "men_cybertruck_owl_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Mujer Maravilla",
             size: 'small'
@@ -126,7 +127,7 @@ export const initialData: SeedData = {
             price: 130,
             // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "chill_pullover_hoodie",
-            // type: 'hoodies',
+            type: 'amigurumis',
             tags: ['hoodie'],
             title: "Chill Pullover Hoodie",
             size: 'all'
@@ -141,7 +142,7 @@ export const initialData: SeedData = {
             price: 225,
             // sizes: ['XS','S','M'],
             slug: "women_cropped_puffer_jacket",
-            // type: 'hoodies',
+            type: 'amigurumis',
             tags: ['hoodie'],
             title: "Hermione mediana",
             size: 'medium'
@@ -156,7 +157,7 @@ export const initialData: SeedData = {
             price: 130,
             // sizes: ['XS','S','M','XXL'],
             slug: "women_chill_half_zip_cropped_hoodie",
-            // type: 'hoodies',
+            type: 'amigurumis',
             tags: ['hoodie'],
             title: "Hulk mediano",
             size: 'medium'
@@ -171,7 +172,7 @@ export const initialData: SeedData = {
             price: 45,
             // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "women_turbine_cropped_long_sleeve_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Kiko mediano",
             size: 'medium'
@@ -186,7 +187,7 @@ export const initialData: SeedData = {
             price: 40,
             // sizes: ['XS','S'],
             slug: "women_turbine_cropped_short_sleeve_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Mona mediana",
             size: 'medium'
@@ -201,7 +202,7 @@ export const initialData: SeedData = {
             price: 35,
             // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "women_t_logo_short_sleeve_scoop_neck_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Monita mediana",
             size: 'medium'
@@ -216,7 +217,7 @@ export const initialData: SeedData = {
             price: 40,
             // sizes: ['XS','S','L','XL','XXL'],
             slug: "women_t_logo_long_sleeve_scoop_neck_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Mono mediano",
             size: 'medium'
@@ -231,7 +232,7 @@ export const initialData: SeedData = {
             price: 35,
             // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "women_small_wordmark_short_sleeve_v-neck_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Pocoyo mediano",
             size: 'medium'
@@ -246,7 +247,7 @@ export const initialData: SeedData = {
             price: 30,
             // sizes: ['XS','S','M'],
             slug: "kids_cybertruck_long_sleeve_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Chapulin grande",
             size: 'big'
@@ -261,7 +262,7 @@ export const initialData: SeedData = {
             price: 25,
             // sizes: ['XS','S','M'],
             slug: "kids_scribble_t_logo_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Frozen grande",
             size: 'big'
@@ -276,7 +277,7 @@ export const initialData: SeedData = {
             price: 25,
             // sizes: ['XS','S','M'],
             slug: "kids_cybertruck_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Groot grande",
             size: 'big'
@@ -291,7 +292,7 @@ export const initialData: SeedData = {
             price: 30,
             // sizes: ['XS','S','M'],
             slug: "kids_racing_stripe_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Hulk grande",
             size: 'big'
@@ -306,7 +307,7 @@ export const initialData: SeedData = {
             price: 30,
             // sizes: ['XS','S','M'],
             slug: "kids_3d_t_logo_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Kiko grande",
             size: 'big'
@@ -321,7 +322,7 @@ export const initialData: SeedData = {
             price: 30,
             // sizes: ['XS','S','M'],
             slug: "kids_checkered_tee",
-            // type: 'shirts',
+            type: 'amigurumis',
             tags: ['shirt'],
             title: "Kids Checkered Tee",
             size: 'big'

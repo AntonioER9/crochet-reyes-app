@@ -8,10 +8,10 @@ export interface Product {
   slug: string;
   tags: string[];
   title: string;
-  // type: Type;
+  type: Type;
   size: Size;
 }
 
 export type Size = 'small' | 'medium' | 'big' | 'all';
 // export type Size = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'XXXL';
-// export type Type = 'shirts' | 'pants' | 'hoodies' | 'hats';
+export type Type = 'amigurumis' | 'tablecloths';
