@@ -37,10 +37,10 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
         spaceBetween={10}
         navigation={true}
         autoplay={{
-          delay: 2500
+          delay: 3000
         }}
         thumbs={{
-          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null //fix para un error especifico
         }}
         modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         className="mySwiper2"
@@ -60,7 +60,6 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
           ))
         }
       </Swiper>
-
 
       <Swiper
         onSwiper={setThumbsSwiper}
