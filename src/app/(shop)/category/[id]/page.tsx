@@ -1,5 +1,5 @@
 import { ProductGrid, Title } from '@/components';
-import { Category } from '@/interfaces';
+import { Size } from '@/interfaces';
 import { initialData } from '@/seed/seed';
 import { notFound } from 'next/navigation';
 
@@ -8,7 +8,7 @@ const seedProducts = initialData.products;
 
 interface Props {
   params: {
-    id: Category;
+    id: Size;
   }
 }
 
@@ -16,12 +16,12 @@ export default function ({ params }: Props) {
 
   const { id } = params;
 
-  const products = seedProducts.filter(product => product.category === id )
+  const products = seedProducts.filter(product => product.size === id )
 
-  const labels: Record<Category, string> = {
-    'small': 'Pequeños',
-    'medium': 'Medianos',
-    'big': 'Grandes',
+  const labels: Record<Size, string> = {
+    'small': 'pequeños',
+    'medium': 'medianos',
+    'big': 'grandes',
     'all': 'Todos los tamaños'
   }
 

@@ -3,16 +3,17 @@ interface SeedProduct {
     images: string[];
     inStock: number;
     price: number;
-    sizes: ValidSizes[];
+    // sizes: ValidSizes[];
     slug: string;
     tags: string[];
     title: string;
-    type: ValidTypes;
-    category: 'small'|'medium'|'big'|'all'
+    // type: ValidTypes;
+    size: ValidSizes;
 }
 
-type ValidSizes = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
-type ValidTypes = 'shirts'|'pants'|'hoodies'|'hats';
+// type ValidSizes = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
+type ValidSizes = 'small' | 'medium' | 'big' | 'all';
+// type ValidTypes = 'shirts'|'pants'|'hoodies'|'hats';
 
 interface SeedData {
     products: SeedProduct[],
@@ -31,12 +32,12 @@ export const initialData: SeedData = {
             ],
             inStock: 7,
             price: 75,
-            sizes: ['XS','S','M','L','XL','XXL'],
+            // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "mens_chill_crew_neck_sweatshirt",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['sweatshirt'],
             title: "Batman",
-            category: 'small'
+            size: 'small'
         },
         {
             description: "Hulk",
@@ -46,14 +47,14 @@ export const initialData: SeedData = {
             ],
             inStock: 5,
             price: 200,
-            sizes: ['XS','S','M','XL','XXL'],
+            // sizes: ['XS','S','M','XL','XXL'],
             slug: "men_quilted_shirt_jacket",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['jacket'],
             title: "Hulk small",
-            category: 'small'
+            size: 'small'
         },
-        
+
         {
             description: "Perrito pequeño",
             images: [
@@ -62,12 +63,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 130,
-            sizes: ['S','M','L','XL','XXL'],
+            // sizes: ['S','M','L','XL','XXL'],
             slug: "men_raven_lightweight_zip_up_bomber_jacket",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Perrito",
-            category: 'small'
+            size: 'small'
         },
 
         {
@@ -78,12 +79,12 @@ export const initialData: SeedData = {
             ],
             inStock: 50,
             price: 45,
-            sizes: ['XS','S','M','L'],
+            // sizes: ['XS','S','M','L'],
             slug: "men_turbine_long_sleeve_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Perro pequeño",
-            category: 'small'
+            size: 'small'
         },
         {
             description: "Superman pequeño",
@@ -93,12 +94,12 @@ export const initialData: SeedData = {
             ],
             inStock: 50,
             price: 40,
-            sizes: ['M','L','XL','XXL'],
+            // sizes: ['M','L','XL','XXL'],
             slug: "men_turbine_short_sleeve_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Superman pequeño",
-            category: 'small'
+            size: 'small'
         },
         {
             description: "Mujer Maravilla",
@@ -108,12 +109,12 @@ export const initialData: SeedData = {
             ],
             inStock: 0,
             price: 35,
-            sizes: ['M','L','XL','XXL'],
+            // sizes: ['M','L','XL','XXL'],
             slug: "men_cybertruck_owl_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Mujer Maravilla",
-            category: 'small'
+            size: 'small'
         },
         {
             description: "Introducing the Tesla Chill Collection. The Chill Pullover Hoodie has a premium, heavyweight exterior and soft fleece interior for comfort in any season. The all hoodie features subtle thermoplastic polyurethane Tesla logos across the chest and on the sleeve, a double layer single seam hood and pockets with custom matte zipper pulls. Made from 60% cotton and 40% recycled polyester.",
@@ -123,12 +124,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 130,
-            sizes: ['XS','S','M','L','XL','XXL'],
+            // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "chill_pullover_hoodie",
-            type: 'hoodies',
+            // type: 'hoodies',
             tags: ['hoodie'],
             title: "Chill Pullover Hoodie",
-            category: 'all'
+            size: 'all'
         },
         {
             description: "Hermione mediana",
@@ -138,12 +139,12 @@ export const initialData: SeedData = {
             ],
             inStock: 85,
             price: 225,
-            sizes: ['XS','S','M'],
+            // sizes: ['XS','S','M'],
             slug: "women_cropped_puffer_jacket",
-            type: 'hoodies',
+            // type: 'hoodies',
             tags: ['hoodie'],
             title: "Hermione mediana",
-            category: 'medium'
+            size: 'medium'
         },
         {
             description: "Hulk mediano",
@@ -153,12 +154,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 130,
-            sizes: ['XS','S','M','XXL'],
+            // sizes: ['XS','S','M','XXL'],
             slug: "women_chill_half_zip_cropped_hoodie",
-            type: 'hoodies',
+            // type: 'hoodies',
             tags: ['hoodie'],
             title: "Hulk mediano",
-            category: 'medium'
+            size: 'medium'
         },
         {
             description: "Kiko mediano",
@@ -168,12 +169,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 45,
-            sizes: ['XS','S','M','L','XL','XXL'],
+            // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "women_turbine_cropped_long_sleeve_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Kiko mediano",
-            category: 'medium'
+            size: 'medium'
         },
         {
             description: "Mona mediana",
@@ -183,12 +184,12 @@ export const initialData: SeedData = {
             ],
             inStock: 0,
             price: 40,
-            sizes: ['XS','S'],
+            // sizes: ['XS','S'],
             slug: "women_turbine_cropped_short_sleeve_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Mona mediana",
-            category: 'medium'
+            size: 'medium'
         },
         {
             description: "Monita mediana",
@@ -198,12 +199,12 @@ export const initialData: SeedData = {
             ],
             inStock: 30,
             price: 35,
-            sizes: ['XS','S','M','L','XL','XXL'],
+            // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "women_t_logo_short_sleeve_scoop_neck_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Monita mediana",
-            category: 'medium'
+            size: 'medium'
         },
         {
             description: "Mono mediano",
@@ -213,12 +214,12 @@ export const initialData: SeedData = {
             ],
             inStock: 16,
             price: 40,
-            sizes: ['XS','S','L','XL','XXL'],
+            // sizes: ['XS','S','L','XL','XXL'],
             slug: "women_t_logo_long_sleeve_scoop_neck_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Mono mediano",
-            category: 'medium'
+            size: 'medium'
         },
         {
             description: "Pocoyo mediano",
@@ -228,12 +229,12 @@ export const initialData: SeedData = {
             ],
             inStock: 18,
             price: 35,
-            sizes: ['XS','S','M','L','XL','XXL'],
+            // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "women_small_wordmark_short_sleeve_v-neck_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Pocoyo mediano",
-            category: 'medium'
+            size: 'medium'
         },
         {
             description: "Chapulin grande",
@@ -243,12 +244,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 30,
-            sizes: ['XS','S','M'],
+            // sizes: ['XS','S','M'],
             slug: "kids_cybertruck_long_sleeve_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Chapulin grande",
-            category: 'big'
+            size: 'big'
         },
         {
             description: "Frozen grande",
@@ -258,12 +259,12 @@ export const initialData: SeedData = {
             ],
             inStock: 0,
             price: 25,
-            sizes: ['XS','S','M'],
+            // sizes: ['XS','S','M'],
             slug: "kids_scribble_t_logo_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Frozen grande",
-            category: 'big'
+            size: 'big'
         },
         {
             description: "Groot grande",
@@ -273,12 +274,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 25,
-            sizes: ['XS','S','M'],
+            // sizes: ['XS','S','M'],
             slug: "kids_cybertruck_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Groot grande",
-            category: 'big'
+            size: 'big'
         },
         {
             description: "Hulk grande",
@@ -288,12 +289,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 30,
-            sizes: ['XS','S','M'],
+            // sizes: ['XS','S','M'],
             slug: "kids_racing_stripe_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Hulk grande",
-            category: 'big'
+            size: 'big'
         },
         {
             description: "Kiko grande",
@@ -303,12 +304,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 30,
-            sizes: ['XS','S','M'],
+            // sizes: ['XS','S','M'],
             slug: "kids_3d_t_logo_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Kiko grande",
-            category: 'big'
+            size: 'big'
         },
         {
             description: "Mona grande",
@@ -318,12 +319,12 @@ export const initialData: SeedData = {
             ],
             inStock: 10,
             price: 30,
-            sizes: ['XS','S','M'],
+            // sizes: ['XS','S','M'],
             slug: "kids_checkered_tee",
-            type: 'shirts',
+            // type: 'shirts',
             tags: ['shirt'],
             title: "Kids Checkered Tee",
-            category: 'big'
+            size: 'big'
         },
     ]
 }
