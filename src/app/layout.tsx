@@ -5,7 +5,10 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Crochet Reyes",
+  title: {
+    template: '%s - Crochet Reyes | Tienda',
+    default: 'Crochet Reyes | Tienda'
+  },
   description: "Tienda virtual de Amigurumis",
 };
 

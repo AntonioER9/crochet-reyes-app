@@ -41,8 +41,8 @@ export const initialData: SeedData = {
         {
             description: "Hulk",
             images: [
-                'hulk-small-2.jpeg',
-                'hulk-small.jpeg',
+                'hulk-small-2.jpg',
+                'hulk-small.jpg',
             ],
             inStock: 5,
             price: 200,

@@ -1,9 +1,9 @@
+export const revalidate = 60; // 60 segundos
+
 import { getPaginatedProductsWithImages } from '@/actions';
 import { Pagination, ProductGrid, Title } from '@/components';
-// import { Size } from '@/interfaces';
-import { initialData } from '@/seed/seed';
 import { Size } from '@prisma/client';
-import { notFound, redirect } from 'next/navigation';
+import { redirect } from 'next/navigation';
 
 interface Props {
   params: {
@@ -14,7 +14,7 @@ interface Props {
   }
 }
 
-export default async function ({ params, searchParams }: Props) {
+export default async function SizeByPage({ params, searchParams }: Props) {
 
   const { size } = params;
 
