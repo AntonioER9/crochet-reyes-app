@@ -3,7 +3,6 @@ interface SeedProduct {
     images: string[];
     inStock: number;
     price: number;
-    // sizes: ValidSizes[];
     slug: string;
     tags: string[];
     title: string;
@@ -33,7 +32,6 @@ export const initialData: SeedData = {
             ],
             inStock: 7,
             price: 75,
-            // sizes: ['XS','S','M','L','XL','XXL'],
             slug: "mens_chill_crew_neck_sweatshirt",
             type: 'amigurumis',
             tags: ['sweatshirt'],
