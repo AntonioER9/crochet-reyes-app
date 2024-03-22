@@ -11,5 +11,16 @@ export interface Product {
   size: Size;
 }
 
+export interface CartProduct {
+  id: string;
+  slug: string;
+  title: string;
+  price: number;
+  quantity: number;
+  size: Size;
+  image: string;
+}
+
+
 export type Size = 'small' | 'medium' | 'big' | 'all';
 export type Type = 'amigurumis' | 'tablecloths';
