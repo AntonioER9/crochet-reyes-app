@@ -17,7 +17,7 @@ export const ProductsInCart = () => {
 
   useEffect(() => {
     setLoaded(true);
-  });
+  }, []); //creo que falto el []
 
   if (!loaded) {
     return <p>Loading...</p>
