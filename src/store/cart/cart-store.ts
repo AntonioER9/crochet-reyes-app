@@ -80,7 +80,7 @@ export const useCartStore = create<State>()(
         const { cart } = get();
 
         const updatedCartProducts = cart.map((item) => {
-          if (item.id === product.id && item.size === product.size) {
+          if (item.id === product.id) {
             return { ...item, quantity: quantity };
           }
           return item;
@@ -92,7 +92,7 @@ export const useCartStore = create<State>()(
       removeProduct: (product: CartProduct) => {
         const { cart } = get();
         const updatedCartProducts = cart.filter(
-          (item) => item.id !== product.id || item.size !== product.size
+          (item) => item.id !== product.id 
         );
 
         set({ cart: updatedCartProducts });
