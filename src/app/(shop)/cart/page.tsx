@@ -21,7 +21,7 @@ export default function CartPage() {
             <ProductsInCart />
           </div>
           {/* Checkout - Resumen de orden */}
-          <div className="bg-white rounded-xl shadow-xl p-7 h-fit">
+          <div className="bg-white rounded-xl shadow-xl p-7 h-fit text-gray-800">
             <h2 className="text-2xl mb-2">Resumen de orden</h2>
 
             <OrderSummary />
@@ -29,8 +29,8 @@ export default function CartPage() {
             <div className="mt-5 mb-2 w-full">
               <Link
                 className="flex btn-primary justify-center"
-                href="/checkout/address">
-                Checkout
+                href="/checkout/order">
+                Ir a pagar
               </Link>
             </div>
           </div>

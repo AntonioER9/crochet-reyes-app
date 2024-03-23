@@ -12,6 +12,7 @@ import {
 } from "@/components";
 import { getProductBySlug } from "@/actions";
 import { AddToCart } from "@/app/(shop)/product/[slug]/ui/AddToCart";
+import { currencyFormat } from '@/utils';
 
 interface Props {
   params: {
@@ -80,12 +81,12 @@ export default async function ProductBySlugPage({ params }: Props) {
           {product.title}
         </h1>
 
-        <p className="text-lg mb-5">${product.price}</p>
+        <p className="text-lg mb-5">{currencyFormat(product.price)}</p>
 
         <AddToCart product={product}/>
 
         {/* Descripción */}
-        <h3 className="font-bold text-sm">Descripción</h3>
+        <h3 className="font-bold text-lg">Descripción</h3>
         <p className="font-light">{product.description}</p>
       </div>
     </div>

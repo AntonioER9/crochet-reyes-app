@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { currencyFormat } from "@/utils";
 import { QuantitySelector, Title } from '@/components';
 import { initialData } from '@/seed/seed';
 import Image from 'next/image';
@@ -14,7 +15,7 @@ export default function CheckoutPage() {
   return (
     <div className="flex justify-center items-center mb-72 px-10 sm:px-0">
       <div className="flex flex-col w-[1000px]">
-        <Title title='Verificar orden' />
+        <Title title='Detalle de tu orden' />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
 
           {/* Carrito */}
@@ -43,8 +44,8 @@ export default function CheckoutPage() {
 
                   <div>
                     <p>{product.title}</p>
-                    <p>${product.price} x 3</p>
-                    <p className="font-bold">Subtotal: ${product.price * 3}</p>
+                    <p>{currencyFormat(product.price)} x 3</p>
+                    <p className="font-bold">Subtotal: {currencyFormat(product.price * 3)}</p>
                   </div>
 
                 </div>
@@ -53,11 +54,11 @@ export default function CheckoutPage() {
           </div>
 
           {/* Checkout - Resumen de orden */}
-          <div className="bg-white rounded-xl shadow-xl p-7">
+          <div className="bg-white rounded-xl shadow-xl p-7 text-gray-800">
 
             <h2 className="text-2xl mb-2">Dirección de entrega</h2>
             <div className="mb-10">
-              <p className="text-xl">Fernando Herrera</p>
+              <p className="text-xl">Antonio Espinoza</p>
               <p>Av. Siempre viva 123</p>
               <p>Col. Centro</p>
               <p>Alcaldía Cuauhtémoc</p>
@@ -78,14 +79,13 @@ export default function CheckoutPage() {
               <span className="text-right">3 artículos</span>
 
               <span>Subtotal</span>
-              <span className="text-right">$ 100</span>
+              <span className="text-right">$ 1.000</span>
 
               <span>Impuestos (15%)</span>
-              <span className="text-right">$ 100</span>
+              <span className="text-right">$ 1.000</span>
 
               <span className="mt-5 text-2xl">Total:</span>
-              <span className="mt-5 text-2xl text-right">$ 100</span>
-
+              <span className="mt-5 text-2xl text-right">$ 1.000</span>
 
             </div>
 
@@ -100,7 +100,7 @@ export default function CheckoutPage() {
               <Link
                 className="flex btn-primary justify-center"
                 href="/orders/123">
-                Colocar orden
+                Generar orden
               </Link>
             </div>
           </div>

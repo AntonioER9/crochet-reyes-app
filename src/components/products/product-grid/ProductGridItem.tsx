@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { Product } from '@/interfaces';
 import { useState } from 'react';
+import { currencyFormat } from '@/utils';
 
 interface Props {
   product: Product;
@@ -24,23 +25,18 @@ export const ProductGridItem = ({ product }: Props) => {
           className="w-full object-cover rounded"
           width={500}
           height={500}
-          // style={{
-          //   height: '380px',
-          //   width: '380px'
-          // }}
-          // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           onMouseEnter={() => setDisplayImage(product.images[1])}
           onMouseLeave={() => setDisplayImage(product.images[0])}
         />
       </Link>
 
-      <div className="p-4 flex flex-col">
+      <div className="p-1 flex flex-col">
         <Link
-          className="hover:text-blue-600"
+          className="hover:text-purple-700 font-bold"
           href={`/product/${product.slug}`}>
           {product.title}
         </Link>
-        <span className="font-bold">${product.price}</span>
+        <span className="">{currencyFormat(product.price)}</span>
       </div>
 
     </div>

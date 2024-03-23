@@ -33,9 +33,9 @@ export const TopMenu = () => {
       {/* Center Menu */}
       <div className="hidden sm:block">
 
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/size/small">Pequeños</Link>
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/size/medium">Medianos</Link>
-        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100" href="/size/big">Grandes</Link>
+        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100 hover:text-purple-700 font-bold" href="/size/small">Pequeños</Link>
+        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100 hover:text-purple-700 font-bold" href="/size/medium">Medianos</Link>
+        <Link className="m-2 p-2 rounded-md transition-all hover:bg-gray-100 hover:text-purple-700 font-bold" href="/size/big">Grandes</Link>
 
       </div>
 
@@ -55,7 +55,7 @@ export const TopMenu = () => {
           <div className="relative">
             {
               ( loaded && totalItemsInCart > 0) && ( //si es mayor a 0 lo muestro
-                <span className="fade-in absolute text-xs px-1 rounded-full font-bold -top-2 -right-2 bg-blue-700 text-white">
+                <span className="fade-in absolute text-xs px-1 rounded-full font-bold -top-2 -right-2 bg-purple-700 text-white">
                   {totalItemsInCart}
                 </span>
               )
@@ -66,7 +66,7 @@ export const TopMenu = () => {
 
         <button
           onClick={openSideMenu}
-          className="m-2 p-2 rounded-md transition-all hover:bg-gray-100">
+          className="m-2 p-2 rounded-md transition-all hover:bg-gray-100 hover:text-purple-700 font-bold">
           Menú
         </button>
 
