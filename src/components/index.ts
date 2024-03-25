@@ -6,6 +6,8 @@ export * from './ui/title/Title';
 export * from './ui/top-menu/TopMenu';
 export * from './ui/footer/Footer';
 
+
+export * from './provider/Provider';
 export * from './product/size-selector/SizeSelector';
 export * from './product/quantity-selector/QuantitySelector';
 export * from './product/slideshow/ProductSlideshow';
