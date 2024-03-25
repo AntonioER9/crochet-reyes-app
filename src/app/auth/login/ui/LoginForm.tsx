@@ -21,7 +21,7 @@ export const LoginForm = () => {
     if (state === 'Success') {
       // redireccionar
       // router.replace('/');
-      window.location.replace('/');
+      window.location.replace('/'); //nos permite hacer un refresh y eliminar las cookies y sesión del usuario.
     }
 
   }, [state]);
