@@ -7,6 +7,7 @@ import clsx from 'clsx';
 // import { placeOrder } from '@/actions';
 import { useCartStore } from "@/store";
 import { currencyFormat } from '@/utils';
+import { placeOrder } from "@/actions";
 
 export const PlaceOrder = () => {
 
@@ -38,7 +39,7 @@ export const PlaceOrder = () => {
     }))
 
     // //! Server Action
-    // const resp = await placeOrder(productsToOrder, address);
+    const resp = await placeOrder(productsToOrder);
     // if (!resp.ok) {
     //   setIsPlacingOrder(false);
     //   setErrorMessage(resp.message);
