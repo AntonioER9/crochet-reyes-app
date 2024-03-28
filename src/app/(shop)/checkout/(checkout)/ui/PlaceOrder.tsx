@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 import clsx from 'clsx';
 
-// import { placeOrder } from '@/actions';
 import { useCartStore } from "@/store";
 import { currencyFormat } from '@/utils';
 import { placeOrder } from "@/actions";
@@ -12,7 +11,7 @@ import { placeOrder } from "@/actions";
 export const PlaceOrder = () => {
 
   const router = useRouter();
-  // const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [isPlacingOrder, setIsPlacingOrder] = useState(false);
 
@@ -21,11 +20,11 @@ export const PlaceOrder = () => {
   );
   const cart = useCartStore(state => state.cart);
 
-  // const clearCart = useCartStore(state => state.clearCart);
+  const clearCart = useCartStore(state => state.clearCart);
 
-  // useEffect(() => {
-  //   setLoaded(true);
-  // }, []);
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
 
 
   const onPlaceOrder = async () => {
@@ -40,15 +39,19 @@ export const PlaceOrder = () => {
 
     // //! Server Action
     const resp = await placeOrder(productsToOrder);
-    // if (!resp.ok) {
-    //   setIsPlacingOrder(false);
-    //   setErrorMessage(resp.message);
-    //   return;
-    // }
+    if (!resp.ok) {
+      setIsPlacingOrder(false);
+      setErrorMessage(resp.message);
+      return;
+    }
 
-    // //* Todo salio bien!
-    // clearCart();
-    // router.replace('/orders/' + resp.order?.id);
+    //* Todo salio bien!
+    clearCart();
+    router.replace('/orders/' + resp.order?.id);
+  }
+
+  if (!loaded) {
+    return <p>Cargando...</p>;
   }
 
   return (
