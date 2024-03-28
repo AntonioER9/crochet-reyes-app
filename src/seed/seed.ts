@@ -1,15 +1,15 @@
 import bcryptjs from 'bcryptjs';
 
 interface SeedProduct {
-    description: string;
-    images: string[];
-    inStock: number;
-    price: number;
-    slug: string;
-    tags: string[];
     title: string;
-    type: ValidTypes;
+    price: number;
+    description: string;
+    slug: string;
+    inStock: number;
     size: ValidSizes;
+    images: string[];
+    tags: string[];
+    type: ValidTypes;
 }
 
 interface SeedUser {
@@ -51,18 +51,18 @@ export const initialData: SeedData = {
     ],
     products: [
         {
+            title: "Batman pequeño",
+            price: 4000,
             description: "Pequeño amigurumi de Batman de 5 cm de alto, puedes encontrar muchos más personajes de Marvel o DC en nuestro sitio web.",
+            slug: "amigurumi_small_batman",
+            inStock: 7,
+            size: 'small',
+            tags: ['amigurumis'],
             images: [
                 'batman-small-2.jpeg',
                 'batman-small.jpeg',
             ],
-            inStock: 1,
-            price: 4000,
-            slug: "amigurumi_small_batman",
             type: 'amigurumis',
-            tags: ['amigurumis'],
-            title: "Batman pequeño",
-            size: 'small'
         },
         {
             description: "Pequeño amigurumi de Hulk de 5 cm de alto, puedes encontrar muchos más personajes de Marvel o DC en nuestro sitio web.",
@@ -70,7 +70,7 @@ export const initialData: SeedData = {
                 'hulk-small-2.jpg',
                 'hulk-small.jpg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 4000,
             slug: "amigurumi_small_hulk",
             type: 'amigurumis',
@@ -85,7 +85,7 @@ export const initialData: SeedData = {
                 'perrito-small-2.jpeg',
                 'perrito-small.jpeg'
             ],
-            inStock: 1,
+            inStock: 7,
             price: 4000,
             slug: "amigurumi_small_perrito",
             type: 'amigurumis',
@@ -100,7 +100,7 @@ export const initialData: SeedData = {
                 'perro-small.jpeg',
                 'perro-small-2.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 4000,
             slug: "amigurumi_small_perro",
             type: 'amigurumis',
@@ -114,7 +114,7 @@ export const initialData: SeedData = {
                 'superman-small-2.jpeg',
                 'superman-small.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 4000,
             slug: "amigurumi_small_superman",
             type: 'amigurumis',
@@ -128,7 +128,7 @@ export const initialData: SeedData = {
                 'wonder-woman-small.jpeg',
                 'wonder-woman-small-2.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 4000,
             slug: "amigurumi_small_wonder-woman",
             type: 'amigurumis',
@@ -142,7 +142,7 @@ export const initialData: SeedData = {
                 'hermione-medium-2.jpeg',
                 'hermione-medium.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 6000,
             slug: "amigurumi_medium_hermione",
             type: 'amigurumis',
@@ -156,7 +156,7 @@ export const initialData: SeedData = {
                 'hulk-medium-2.jpeg',
                 'hulk-medium.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 6000,
             slug: "amigurumi_medium_hulk",
             type: 'amigurumis',
@@ -170,7 +170,7 @@ export const initialData: SeedData = {
                 'kiko-medium-2.jpeg',
                 'kiko-medium.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 6000,
             slug: "amigurumi_medium_kiko",
             type: 'amigurumis',
@@ -184,7 +184,7 @@ export const initialData: SeedData = {
                 'juanita-medium-2.jpeg',
                 'juanita-medium.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 6000,
             slug: "amigurumi_medium_juanita",
             type: 'amigurumis',
@@ -198,7 +198,7 @@ export const initialData: SeedData = {
                 'snow-white-medium.jpeg',
                 'snow-white-medium-2.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 6000,
             slug: "amigurumi_medium_snow_white",
             type: 'amigurumis',
@@ -212,7 +212,7 @@ export const initialData: SeedData = {
                 'stitch-medium-2.jpeg',
                 'stitch-medium.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 6000,
             slug: "amigurumi_medium_stitch",
             type: 'amigurumis',
@@ -226,7 +226,7 @@ export const initialData: SeedData = {
                 'pocoyo-medium-2.jpeg',
                 'pocoyo-medium.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 6000,
             slug: "amigurumi_medium_pocoyo",
             type: 'amigurumis',
@@ -240,7 +240,7 @@ export const initialData: SeedData = {
                 'chapulin-big-2.jpeg',
                 'chapulin-big.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 8000,
             slug: "amigurumi_big_chapulin",
             type: 'amigurumis',
@@ -254,7 +254,7 @@ export const initialData: SeedData = {
                 'frozen-big-2.jpeg',
                 'frozen-big.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 8000,
             slug: "amigurumi_big_frozen",
             type: 'amigurumis',
@@ -268,7 +268,7 @@ export const initialData: SeedData = {
                 'groot-big-2.jpeg',
                 'groot-big.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 8000,
             slug: "amigurumi_big_groot",
             type: 'amigurumis',
@@ -282,7 +282,7 @@ export const initialData: SeedData = {
                 'hulk-big-2.jpeg',
                 'hulk-big.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 8000,
             slug: "amigurumi_big_hulk",
             type: 'amigurumis',
@@ -296,7 +296,7 @@ export const initialData: SeedData = {
                 'kiko-big-2.jpeg',
                 'kiko-big.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 8000,
             slug: "amigurumi_big_kiko",
             type: 'amigurumis',
@@ -310,7 +310,7 @@ export const initialData: SeedData = {
                 'masha-big.jpeg',
                 'masha-big-2.jpeg',
             ],
-            inStock: 1,
+            inStock: 7,
             price: 8000,
             slug: "amigurumi_big_masha",
             type: 'amigurumis',
