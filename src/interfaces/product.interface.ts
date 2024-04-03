@@ -21,6 +21,12 @@ export interface CartProduct {
   image: string;
 }
 
+export interface ProductImage {
+  id: number;
+  url: string;
+  productId: string;
+}
+
 
 export type Size = 'small' | 'medium' | 'big' | 'all';
 export type Type = 'amigurumis' | 'tablecloths';

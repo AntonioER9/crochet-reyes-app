@@ -15,7 +15,7 @@ export const ProductImage = ({
   className,
   style,
   width,
-  height
+  height,
 }: Props) => {
 
   const localSrc = (src)

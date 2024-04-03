@@ -1,4 +1,4 @@
-import { Title } from "@/components";
+import { ProductImage, Title } from "@/components";
 import Image from "next/image";
 import clsx from "clsx";
 import { IoCardOutline } from "react-icons/io5";
@@ -52,8 +52,8 @@ export default async function OrdersByIdPage({ params }: Props) {
                 key={item.product.slug + "-" + item.size}
                 className="flex mb-5"
               >
-                <Image
-                  src={`/products/${item.product.ProductImage[0].url}`}
+                <ProductImage
+                  src={item.product.ProductImage[0].url}
                   width={100}
                   height={100}
                   style={{
