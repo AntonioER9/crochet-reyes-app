@@ -87,14 +87,7 @@ export const PlaceOrder = () => {
         <p className="mb-5">
           {/* Disclaimer */}
           <span className="text-xs">
-            Al hacer clic en &quot;Colocar orden&quot;, aceptas nuestros{" "}
-            <a href="#" className="underline">
-              términos y condiciones
-            </a>{" "}
-            y{" "}
-            <a href="#" className="underline">
-              política de privacidad
-            </a>
+            Al hacer clic en &quot;Generar orden&quot;, empezaremos a trabajar en tu pedido, envianos el comprobante de transferencia al +56997112878 o al correo myriam.reyesf@gmail.com para coordinar la entrega.
           </span>
         </p>
 
@@ -106,12 +99,12 @@ export const PlaceOrder = () => {
           onClick={onPlaceOrder}
           className={
             clsx({
-              'btn-primary': !isPlacingOrder,
-              'btn-disabled': isPlacingOrder
+              'btn-primary w-full': !isPlacingOrder,
+              'btn-disabled w-full': isPlacingOrder
             })
           }
         >
-          Colocar orden
+          Generar orden
         </button>
       </div>
     </div>

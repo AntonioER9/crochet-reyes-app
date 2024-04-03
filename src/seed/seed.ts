@@ -19,9 +19,8 @@ interface SeedUser {
     role: 'admin' | 'user'
 }
 
-// type ValidSizes = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
 type ValidSizes = 'small' | 'medium' | 'big' | 'all';
-type ValidTypes = 'amigurumis' | 'tablecloths';
+type ValidTypes = 'amigurumis' | 'manteles';
 
 interface SeedData {
     users: SeedUser[];
@@ -33,21 +32,21 @@ export const initialData: SeedData = {
 
     users: [
         {
-            email: 'fernando@google.com',
-            name: 'Fernando Herrera',
+            email: 'antonio@google.com',
+            name: 'Antonio Espinoza',
             password: bcryptjs.hashSync('123456'),
             role: 'admin'
         },
         {
-            email: 'melissa@google.com',
-            name: 'Melissa Flores',
+            email: 'test@google.com',
+            name: 'Test Test',
             password: bcryptjs.hashSync('123456'),
             role: 'user'
         },
     ],
 
     categories: [
-        'Amigurumis', 'Tablecloths'
+        'amigurumis', 'manteles'
     ],
     products: [
         {
