@@ -14,6 +14,11 @@ enum Size {
   all
 }
 
+enum Role {
+  admin
+  user
+}
+
 model Category {
   id      String    @id @default(uuid())
   name    String    @unique
@@ -36,6 +41,7 @@ model Product {
   categoryId String
 
   ProductImage ProductImage[]
+  OrderItem    OrderItem[]
 
   @@index([size])
 }
@@ -43,6 +49,51 @@ model Product {
 model ProductImage {
   id  Int    @id @default(autoincrement())
   url String
+
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+}
+
+model User {
+  id            String    @id @default(uuid())
+  name          String
+  email         String    @unique
+  emailVerified DateTime?
+  password      String
+  role          Role      @default(user)
+  image         String?
+
+  //Relaciones
+  Order Order[]
+}
+
+// Order de compras
+model Order {
+  id           String    @id @default(uuid())
+  total        Float
+  itemsInOrder Int
+  isPaid       Boolean   @default(false)
+  paidAt       DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relaciones
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+
+  OrderItem    OrderItem[]
+}
+
+model OrderItem {
+  id       String @id @default(uuid())
+  quantity Int
+  price    Float
+  size     Size
+
+  // Relaciones
+  order   Order  @relation(fields: [orderId], references: [id])
+  orderId String
 
   product   Product @relation(fields: [productId], references: [id])
   productId String
